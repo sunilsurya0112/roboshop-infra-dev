@@ -7,8 +7,8 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "remote-state-23" #bucket name
-    key            = "cdn"           #file name in bucket
+    bucket         = "dev-remote-state-22" #bucket name
+    key            = "cart"           #file name in bucket
     region         = "us-east-1"
     dynamodb_table = "dev-remotestate-locking" #dynamodb table name
   }
