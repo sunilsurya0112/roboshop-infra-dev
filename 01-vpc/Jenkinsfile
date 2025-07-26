@@ -1,16 +1,15 @@
 pipeline {
-
-    agent {
-      node {
-         label 'AGENT-1'
+        agent {
+            node {
+                label 'AGENT-1'
+                }
+                }
+        
+        options {
+            timeout(time: 1, unit: 'HOURS') 
+            disableConcurrentBuilds()
            }
-         }
-   
-    options {
-        timeout(time: 1, unit: 'HOURS') 
-        disableConcurrentBuilds()
-    }
-//Build
+  //Build
     stages {
         stage('Init') {
             steps {
@@ -47,8 +46,9 @@ pipeline {
             }
         }
         
-    }
-//post build
+      }
+    } 
+     //post build
     post { 
         always { 
             echo 'I will always say Hello again!'
@@ -60,4 +60,9 @@ pipeline {
              echo 'I will say hello when pipe line is success'
         }
     }
+
+
+
+ 
+
 }
