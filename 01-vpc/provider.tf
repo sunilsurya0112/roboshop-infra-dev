@@ -6,12 +6,12 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "dev-remote-state-22" #bucket name
-    key    = "vpc" #file name in bucket
-    region = "us-east-1"
-    dynamodb_table = "dev-remotestate-locking" #dynamodb table name
-  }
+#   backend "s3" {
+#     bucket = "dev-remote-state-22" #bucket name
+#     key    = "vpc" #file name in bucket
+#     region = "us-east-1"
+#     dynamodb_table = "dev-remotestate-locking" #dynamodb table name
+#   }
 }
 
 
